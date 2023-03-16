@@ -6,6 +6,7 @@ import {
   defaultFontFamily,
   FONTS,
   MARGINS,
+  PADDINGS,
 } from '../../utils/Constants';
 
 const styles = StyleSheet.create({
@@ -17,27 +18,42 @@ const styles = StyleSheet.create({
     marginBottom: MARGINS.M15,
   },
   contentStyle: {
-    padding: MARGINS.M10,
-    alignItems: 'center',
+    padding: PADDINGS.P10,
     justifyContent: 'space-between',
   },
   signupImageStyle: {
     width: '70%',
-    height: RFValue(200),
+    height: RFValue(175),
+    alignSelf: 'center',
+  },
+  title: {
+    alignSelf: 'center',
   },
   socialMediaViewStyle: {
+    alignSelf: 'center',
     flexDirection: 'row',
   },
   haveAccountTextStyle: {
-    fontSize: FONTS.F14,
+    alignSelf: 'center',
+    fontSize: FONTS.F12,
     color: COLORS.black200,
     fontFamily: defaultFontFamily,
   },
   signInText: {
-    fontSize: FONTS.F14,
+    fontSize: FONTS.F12,
     color: COLORS.mainColor100,
     fontFamily: boldFontFamily,
     textDecorationLine: 'underline',
+  },
+  errorTextStyle: {
+    fontSize: FONTS.F12,
+    color: COLORS.red100,
+    fontFamily: defaultFontFamily,
+    marginBottom: MARGINS.M5,
+  },
+  inputErrorView: {
+    flex: 1,
+    // backgroundColor: 'red',
   },
 });
 

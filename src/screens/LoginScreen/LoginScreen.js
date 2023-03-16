@@ -8,12 +8,44 @@ import SocialMediaComponent from '../../components/SocialMediaComponent';
 import ReusableStyles from '../../styles/ReusableStyles';
 import styles from './LoginScreenStyle';
 import {COLORS} from '../../utils/Constants';
+import {useForm, Controller} from 'react-hook-form';
 
 function LoginScreen() {
   const [toggleCheckBox, setToggleCheckBox] = useState(false);
+  const [focus, setFocus] = useState({
+    email: false,
+    password: false,
+  });
+  const [secure, setSecure] = useState(true);
+  const {
+    control,
+    handleSubmit,
+    reset,
+    formState: {errors},
+  } = useForm();
+
+  const onSubmit = data => {
+    setFocus({email: false, password: false});
+    reset();
+  };
+  const onFocusHandler = key => {
+    if (key === 'email') {
+      setFocus({email: true, password: false});
+    } else {
+      setFocus({email: false, password: true});
+    }
+  };
+  const onBlur = () => {
+    setFocus({email: false, password: false});
+  };
+  const changeSecureEntry = () => {
+    setSecure(!secure);
+  };
   return (
     <View style={styles.container}>
-      <ScrollView contentContainerStyle={styles.contentStyle}>
+      <ScrollView
+        // keyboardShouldPersistTaps="always"
+        contentContainerStyle={styles.contentStyle}>
         <Image
           source={require('../../assets/Images/login.png')}
           style={[styles.loginImageStyle, styles.marginBottom]}
@@ -26,22 +58,92 @@ function LoginScreen() {
           ]}>
           Welcome back!
         </Text>
-        <ReusableTextInput
-          label="Email address"
-          iconName="mail"
-          style={styles.marginBottom}
+        <Controller
+          name="email"
+          control={control}
+          rules={{
+            required: true,
+            pattern: /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/,
+          }}
+          render={({field: {onChange, value}}) => {
+            return (
+              <ReusableTextInput
+                onBlur={onBlur}
+                onFocus={() => {
+                  onFocusHandler('email');
+                }}
+                borderColor={
+                  (focus.email ? COLORS.mainColor100 : COLORS.gray100,
+                  errors.email
+                    ? COLORS.red100
+                    : focus.email
+                    ? COLORS.mainColor100
+                    : COLORS.gray100)
+                }
+                keyboardType="email-address"
+                autoCapitalize="none"
+                label="Email address"
+                iconName="mail"
+                onChangeText={onChange}
+                value={value}
+              />
+            );
+          }}
         />
-        <ReusableTextInput
-          forgetPassword
-          secureTextEntry
-          label="Password"
-          iconName="eye-off"
+        <Text style={[styles.errorTextStyle]}>
+          {errors.email?.type === 'required'
+            ? 'Must Enter Email'
+            : errors.email?.type === 'pattern'
+            ? 'Enter Correct Email'
+            : ''}
+        </Text>
+        <Controller
+          name="password"
+          control={control}
+          rules={{
+            required: true,
+            pattern: /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,20}$/,
+            maxLength: 20,
+          }}
+          render={({field: {onChange, value}}) => {
+            return (
+              <ReusableTextInput
+                secureTextEntry={secure}
+                password
+                secure={secure}
+                onPress={changeSecureEntry}
+                onFocus={() => {
+                  onFocusHandler('password');
+                }}
+                onBlur={onBlur}
+                borderColor={
+                  (focus.password ? COLORS.mainColor100 : COLORS.gray100,
+                  errors.password
+                    ? COLORS.red100
+                    : focus.password
+                    ? COLORS.mainColor100
+                    : COLORS.gray100)
+                }
+                value={value}
+                onChangeText={onChange}
+                forgetPassword
+                label="Password"
+                iconName="eye-off"
+              />
+            );
+          }}
         />
+        <Text style={[styles.errorTextStyle]}>
+          {errors.password?.type === 'required'
+            ? 'Must Enter Password'
+            : errors.password?.type === 'pattern'
+            ? 'Enter Correct Password'
+            : null}
+        </Text>
         <View style={[styles.rememberMeView, styles.marginBottom]}>
           <View style={styles.checkBoxViewStyle}>
             <CheckBox
-              tintColors={COLORS.mainColor100}
-              // disabled={false}
+              tintColors={{true: COLORS.mainColor100, false: COLORS.black200}}
               value={toggleCheckBox}
               onValueChange={newValue => setToggleCheckBox(newValue)}
             />
@@ -58,7 +160,11 @@ function LoginScreen() {
             source={require('../../assets/Images/facebook.png')}
           />
         </View>
-        <GeneralButton title="Log in" style={styles.marginBottom} />
+        <GeneralButton
+          title="Log in"
+          style={styles.marginBottom}
+          onPress={handleSubmit(onSubmit)}
+        />
         <Text style={styles.haveAccountTextStyle}>
           Don't have an account?
           <Text style={styles.signUpText}> Sign up now.</Text>

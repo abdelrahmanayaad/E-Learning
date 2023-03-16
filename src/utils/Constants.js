@@ -6,6 +6,7 @@ const boldFontFamily = 'RCB';
 const COLORS = {
   // mainColor100: '#8A44FD',
   mainColor100: '#C287FC',
+  mainColor200: '#D1A5FD',
   white100: '#fff',
   gray100: '#AEADAF',
   gray500: '#FAF8F8',
@@ -13,6 +14,7 @@ const COLORS = {
   // black200: '#1D233E',
   black200: '#282F4D',
   bgInput: '#FAF8F8',
+  red100: '#f00',
 };
 
 const PADDINGS = {
@@ -28,8 +30,11 @@ const MARGINS = {
 };
 
 const FONTS = {
+  F10: RFValue(10),
+  F11: RFValue(11),
   F12: RFValue(12),
   F14: RFValue(14),
+  F15: RFValue(15),
   F16: RFValue(16),
   F20: RFValue(20),
 };

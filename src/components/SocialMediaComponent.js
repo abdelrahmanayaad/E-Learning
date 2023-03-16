@@ -14,8 +14,8 @@ function SocialMediaComponent(props) {
 
 const styles = StyleSheet.create({
   container: {
-    width: RFValue(45),
-    height: RFValue(45),
+    width: RFValue(40),
+    height: RFValue(40),
     borderRadius: RFValue(10),
     marginBottom: RFValue(5),
     borderWidth: 1,
@@ -26,8 +26,8 @@ const styles = StyleSheet.create({
     marginHorizontal: MARGINS.M15,
   },
   iconImage: {
-    width: RFValue(30),
-    height: RFValue(30),
+    width: RFValue(25),
+    height: RFValue(25),
   },
 });
 

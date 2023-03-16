@@ -1,5 +1,11 @@
 import React from 'react';
-import {StyleSheet, Text, View, TextInput} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  TextInput,
+  TouchableOpacity,
+} from 'react-native';
 import {RFValue} from 'react-native-responsive-fontsize';
 import Feather from 'react-native-vector-icons/Feather';
 import {
@@ -19,14 +25,33 @@ function ReusableTextInput(props) {
     iconName,
     iconStyle,
     forgetPassword,
+    borderColor,
+    onFocus,
+    password,
+    secure,
+    onPress,
     ...rest
   } = props;
   return (
     <View style={style}>
       <Text style={styles.labelText}>{label}</Text>
-      <View style={[styles.textInputWrapper, textInputStyle]}>
-        <TextInput {...rest} style={styles.textInput} />
-        <Feather name={iconName} style={[styles.iconStyle, iconStyle]} />
+      <View style={[styles.textInputWrapper, textInputStyle, {borderColor}]}>
+        <TextInput
+          {...rest}
+          selectionColor={COLORS.mainColor200}
+          onFocus={onFocus}
+          style={styles.textInput}
+        />
+        {password ? (
+          <TouchableOpacity onPress={onPress}>
+            <Feather
+              name={secure ? 'eye' : 'eye-off'}
+              style={[styles.iconStyle, iconStyle]}
+            />
+          </TouchableOpacity>
+        ) : (
+          <Feather name={iconName} style={[styles.iconStyle, iconStyle]} />
+        )}
       </View>
     </View>
   );
@@ -39,7 +64,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     width: '100%',
     alignItems: 'center',
-    height: RFValue(44),
+    height: RFValue(40),
     backgroundColor: COLORS.bgInput,
     borderWidth: RFValue(1),
     borderColor: COLORS.mainColor100,
@@ -52,11 +77,11 @@ const styles = StyleSheet.create({
     fontFamily: defaultFontFamily,
   },
   iconStyle: {
-    fontSize: FONTS.F20,
+    fontSize: FONTS.F16,
     color: COLORS.black200,
   },
   labelText: {
-    fontSize: FONTS.F12,
+    fontSize: FONTS.F11,
     fontFamily: defaultFontFamily,
     color: COLORS.gray100,
     marginBottom: RFValue(2),
