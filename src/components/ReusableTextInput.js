@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import {RFValue} from 'react-native-responsive-fontsize';
+import Icon from 'react-native-vector-icons/Feather';
 import Feather from 'react-native-vector-icons/Feather';
 import {
   boldFontFamily,
@@ -30,12 +31,16 @@ function ReusableTextInput(props) {
     password,
     secure,
     onPress,
+    left,
+    right,
+    rightIconName,
     ...rest
   } = props;
   return (
     <View style={style}>
       <Text style={styles.labelText}>{label}</Text>
       <View style={[styles.textInputWrapper, textInputStyle, {borderColor}]}>
+        {right && <Icon name={rightIconName} style={styles.rightIcon} />}
         <TextInput
           {...rest}
           selectionColor={COLORS.mainColor200}
@@ -85,5 +90,10 @@ const styles = StyleSheet.create({
     fontFamily: defaultFontFamily,
     color: COLORS.gray100,
     marginBottom: RFValue(2),
+  },
+  rightIcon: {
+    fontSize: FONTS.F16,
+    color: COLORS.gray100,
+    marginRight: MARGINS.M5,
   },
 });
