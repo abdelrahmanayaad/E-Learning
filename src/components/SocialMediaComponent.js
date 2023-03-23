@@ -4,9 +4,9 @@ import {RFValue} from 'react-native-responsive-fontsize';
 import {COLORS, MARGINS, PADDINGS} from '../utils/Constants';
 
 function SocialMediaComponent(props) {
-  const {source} = props;
+  const {source, ...rest} = props;
   return (
-    <TouchableOpacity style={styles.container}>
+    <TouchableOpacity {...rest} style={styles.container}>
       <Image style={styles.iconImage} source={source} />
     </TouchableOpacity>
   );

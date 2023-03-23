@@ -8,12 +8,16 @@ import HomeScreen from './src/screens/HomeScreen/HomeScreen';
 import {StatusBar} from 'react-native';
 import {COLORS} from './src/utils/Constants';
 import CoursePoster from './src/components/CoursePoster';
+import DetailsScreen from './src/screens/DetailsScreen/DetailsScreen';
+import Header from './src/components/Header';
+import LoginWithGoogle from './src/components/LoginWithGoogle';
+import AppContainer from './src/navigation/AppContainer';
 
 function App() {
   return (
     <Fragment>
       <StatusBar backgroundColor={COLORS.mainColor400} />
-      <HomeScreen />
+      <AppContainer />
     </Fragment>
   );
 }

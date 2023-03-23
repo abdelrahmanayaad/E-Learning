@@ -71,6 +71,9 @@ const styles = StyleSheet.create({
     color: COLORS.red100,
     fontFamily: defaultFontFamily,
   },
+  textInputStyle: {
+    backgroundColor: COLORS.white100,
+  },
 });
 
 export default styles;

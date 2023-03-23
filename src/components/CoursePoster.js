@@ -30,9 +30,10 @@ function CoursePoster(props) {
     mins,
     lectures,
     rate,
+    ...rest
   } = props;
   return (
-    <View style={[styles.container, style]}>
+    <TouchableOpacity {...rest} style={[styles.container, style]}>
       <ImageBackground
         borderTopLeftRadius={RFValue(10)}
         borderTopRightRadius={RFValue(10)}
@@ -66,7 +67,7 @@ function CoursePoster(props) {
           </View>
         </View>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 }
 

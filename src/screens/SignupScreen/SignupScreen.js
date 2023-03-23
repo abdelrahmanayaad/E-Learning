@@ -68,6 +68,7 @@ function SignupScreen() {
             return (
               <View style={styles.inputErrorView}>
                 <ReusableTextInput
+                  textInputStyle={styles.textInputStyle}
                   onFocus={() => {
                     onFocusHandler('name');
                   }}
@@ -103,6 +104,7 @@ function SignupScreen() {
             return (
               <View style={styles.inputErrorView}>
                 <ReusableTextInput
+                  textInputStyle={styles.textInputStyle}
                   onFocus={() => {
                     onFocusHandler('email');
                   }}
@@ -145,6 +147,7 @@ function SignupScreen() {
             return (
               <View style={styles.inputErrorView}>
                 <ReusableTextInput
+                  textInputStyle={styles.textInputStyle}
                   onFocus={() => {
                     onFocusHandler('Password');
                   }}

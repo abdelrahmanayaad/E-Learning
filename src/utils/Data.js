@@ -33,6 +33,23 @@ const computerScienceCourses = [
     mins: 22,
     lectures: 70,
     rate: 4.6,
+    price: 46,
+    description:
+      'course talk about Machine Learning Fundamental and get deep into this field contain all topics to get work after course and more ...',
+    lessons: [
+      {
+        name: 'Introduction',
+        videos: 1,
+      },
+      {
+        name: 'Chapter 1',
+        videos: 7,
+      },
+      {
+        name: 'Chapter 2',
+        videos: 10,
+      },
+    ],
   },
   {
     id: 2,
@@ -44,6 +61,27 @@ const computerScienceCourses = [
     mins: 45,
     lectures: 32,
     rate: 4.8,
+    price: 120,
+    description:
+      'course talk about Data Structure and get deep into this field contain all topics of Data Structure and more ... ',
+    lessons: [
+      {
+        name: 'Introduction',
+        videos: 2,
+      },
+      {
+        name: 'Chapter 1',
+        videos: 5,
+      },
+      {
+        name: 'Chapter 2',
+        videos: 20,
+      },
+      {
+        name: 'Chapter 3',
+        videos: 8,
+      },
+    ],
   },
   {
     id: 3,
@@ -55,6 +93,31 @@ const computerScienceCourses = [
     mins: 33,
     lectures: 230,
     rate: 4.9,
+    price: 69.9,
+    description:
+      'course talk about React Native and get deep into this field contain all topics and more ... ',
+    lessons: [
+      {
+        name: 'Introduction',
+        videos: 1,
+      },
+      {
+        name: 'Component',
+        videos: 7,
+      },
+      {
+        name: 'JavaScript',
+        videos: 24,
+      },
+      {
+        name: 'React Hooks',
+        videos: 8,
+      },
+      {
+        name: 'React Redux',
+        videos: 31,
+      },
+    ],
   },
 ];
 const engineeringCourses = [
@@ -68,6 +131,23 @@ const engineeringCourses = [
     mins: 22,
     lectures: 70,
     rate: 4.6,
+    price: 130,
+    description:
+      'course talk about Engineering Fundamental and get deep into this field contain all topics and more ... ',
+    lessons: [
+      {
+        name: 'Introduction',
+        videos: 1,
+      },
+      {
+        name: 'Engineering Fundamental',
+        videos: 6,
+      },
+      {
+        name: 'Engineering',
+        videos: 10,
+      },
+    ],
   },
 ];
 const scienceCourses = [
@@ -81,6 +161,23 @@ const scienceCourses = [
     mins: 34,
     lectures: 30,
     rate: 4.2,
+    price: 46,
+    description:
+      'course talk about Science Fundamental and get deep into this field contain all topics and more ... ',
+    lessons: [
+      {
+        name: 'Introduction',
+        videos: 3,
+      },
+      {
+        name: 'Chapter 1',
+        videos: 40,
+      },
+      {
+        name: 'Chapter 2',
+        videos: 3,
+      },
+    ],
   },
 ];
 
@@ -95,6 +192,27 @@ const recommendedCourses = [
     mins: 22,
     lectures: 129,
     rate: 4.7,
+    price: 46,
+    description:
+      'course talk about Mathematical Fundamental and get deep into this field contain all topics and more ... ',
+    lessons: [
+      {
+        name: 'Introduction',
+        videos: 3,
+      },
+      {
+        name: 'Chapter 1',
+        videos: 3,
+      },
+      {
+        name: 'Chapter 2',
+        videos: 6,
+      },
+      {
+        name: 'Chapter 3',
+        videos: 13,
+      },
+    ],
   },
   {
     id: 2,
@@ -106,6 +224,23 @@ const recommendedCourses = [
     mins: 45,
     lectures: 21,
     rate: 4.3,
+    price: 46,
+    description:
+      'course talk about Learn How To Become Designer and get deep into this field contain all topics and more  ... ',
+    lessons: [
+      {
+        name: 'Introduction',
+        videos: 1,
+      },
+      {
+        name: 'Chapter 1',
+        videos: 7,
+      },
+      {
+        name: 'Chapter 2',
+        videos: 6,
+      },
+    ],
   },
 ];
 

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "877385371387",
+    "project_id": "elearning-a8a8a",
+    "storage_bucket": "elearning-a8a8a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:877385371387:android:9d80e7a504732e9aef6a5e",
+        "android_client_info": {
+          "package_name": "com.elearninguniquejo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "877385371387-60lq5c9ofmhmf9rdc76cknjqgmdq1qa7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCK2xovvYj0lYdlyztCZnA4OWI2-JZa8hA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "877385371387-60lq5c9ofmhmf9rdc76cknjqgmdq1qa7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

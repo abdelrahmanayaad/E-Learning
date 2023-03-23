@@ -22,7 +22,8 @@ import {
 import styles from './HomeScreenStyles';
 import * as Animatable from 'react-native-animatable';
 
-function HomeScreen() {
+function HomeScreen(props) {
+  const {navigation} = props;
   const [selectedField, setSelectedField] = useState(0);
   const renderItemHandler = ({item, index}) => {
     return (
@@ -55,6 +56,10 @@ function HomeScreen() {
   const renderCourses = ({item, index}) => {
     return (
       <CoursePoster
+        onPress={() => {
+          navigation.navigate('DetailsScreen', {data: item});
+          console.log(item);
+        }}
         style={styles.coursePoster}
         backgroundImage={item.backgroundImage}
         profileImage={item.profileImage}

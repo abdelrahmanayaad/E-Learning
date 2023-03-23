@@ -5,6 +5,7 @@ import {
   COLORS,
   defaultFontFamily,
   FONTS,
+  MARGINS,
 } from '../utils/Constants';
 
 const ReusableStyles = StyleSheet.create({
@@ -27,6 +28,7 @@ const ReusableStyles = StyleSheet.create({
     fontFamily: boldFontFamily,
     fontSize: FONTS.F18,
     color: COLORS.mainColor400,
+    marginBottom: MARGINS.M10,
   },
 });
 

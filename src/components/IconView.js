@@ -5,10 +5,10 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import {COLORS, FONTS} from '../utils/Constants';
 
 function IconView(props) {
-  const {name} = props;
+  const {name, iconViewStyle, iconStyle} = props;
   return (
-    <View style={styles.iconView}>
-      <Icon name={name} style={styles.icon} />
+    <View style={[styles.iconView, iconViewStyle]}>
+      <Icon name={name} style={[styles.icon, iconStyle]} />
     </View>
   );
 }

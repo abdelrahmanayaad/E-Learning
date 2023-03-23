@@ -9,6 +9,7 @@ import ReusableStyles from '../../styles/ReusableStyles';
 import styles from './LoginScreenStyle';
 import {COLORS} from '../../utils/Constants';
 import {useForm, Controller} from 'react-hook-form';
+import LoginWithGoogle from '../../components/LoginWithGoogle';
 
 function LoginScreen() {
   const [toggleCheckBox, setToggleCheckBox] = useState(false);
@@ -68,6 +69,7 @@ function LoginScreen() {
           render={({field: {onChange, value}}) => {
             return (
               <ReusableTextInput
+                textInputStyle={styles.textInputStyle}
                 onBlur={onBlur}
                 onFocus={() => {
                   onFocusHandler('email');
@@ -108,6 +110,7 @@ function LoginScreen() {
           render={({field: {onChange, value}}) => {
             return (
               <ReusableTextInput
+                textInputStyle={styles.textInputStyle}
                 secureTextEntry={secure}
                 password
                 secure={secure}
@@ -153,9 +156,7 @@ function LoginScreen() {
         </View>
         <OrSeperateLine style={styles.marginBottom} />
         <View style={[styles.socialMediaViewStyle, styles.marginBottom]}>
-          <SocialMediaComponent
-            source={require('../../assets/Images/google.png')}
-          />
+          <LoginWithGoogle />
           <SocialMediaComponent
             source={require('../../assets/Images/facebook.png')}
           />

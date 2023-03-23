@@ -1,4 +1,4 @@
-package com.elearning.newarchitecture;
+package com.elearninguniquejo.newarchitecture;
 
 import android.app.Application;
 import androidx.annotation.NonNull;
@@ -19,9 +19,11 @@ import com.facebook.react.fabric.CoreComponentsRegistry;
 import com.facebook.react.fabric.FabricJSIModuleProvider;
 import com.facebook.react.fabric.ReactNativeConfig;
 import com.facebook.react.uimanager.ViewManagerRegistry;
-import com.elearning.BuildConfig;
-import com.elearning.newarchitecture.components.MainComponentsRegistry;
-import com.elearning.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
+import com.elearninguniquejo.BuildConfig;
+//!here
+import com.elearninguniquejo.newarchitecture.components.MainComponentsRegistry;
+// //!here
+import com.elearninguniquejo.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -65,6 +67,7 @@ public class MainApplicationReactNativeHost extends ReactNativeHost {
       getReactPackageTurboModuleManagerDelegateBuilder() {
     // Here we provide the ReactPackageTurboModuleManagerDelegate Builder. This is necessary
     // for the new architecture and to use TurboModules correctly.
+    //!here
     return new MainApplicationTurboModuleManagerDelegate.Builder();
   }
 
@@ -94,6 +97,7 @@ public class MainApplicationReactNativeHost extends ReactNativeHost {
                 // Here we register a Components Registry.
                 // The one that is generated with the template contains no components
                 // and just provides you the one from React Native core.
+                //!here
                 MainComponentsRegistry.register(componentFactory);
 
                 final ReactInstanceManager reactInstanceManager = getReactInstanceManager();

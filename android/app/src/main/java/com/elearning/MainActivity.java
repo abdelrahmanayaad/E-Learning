@@ -1,4 +1,4 @@
-package com.elearning;
+package com.elearninguniquejo;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
