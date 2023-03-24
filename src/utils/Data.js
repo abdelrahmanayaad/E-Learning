@@ -262,6 +262,63 @@ const ongoingCourses = [
   },
 ];
 
+const myCourses = [
+  {
+    id: 1,
+    image: require('../assets/Images/computer.png'),
+    courseName: 'Machine Learning Fundamental',
+    hours: 35,
+    mins: 22,
+    lessons: 70,
+    rate: 4.6,
+  },
+  {
+    id: 2,
+    image: require('../assets/Images/dataStructure.jpg'),
+    courseName: 'Data Structure',
+    hours: 20,
+    mins: 45,
+    lessons: 32,
+    rate: 4.8,
+  },
+  {
+    id: 3,
+    image: require('../assets/Images/reactnative.png'),
+    courseName: 'React Native',
+    hours: 42,
+    mins: 33,
+    lessons: 230,
+    rate: 4.9,
+  },
+  {
+    id: 4,
+    image: require('../assets/Images/designer.png'),
+    courseName: 'Learn How To Become Designer',
+    hours: 6,
+    mins: 45,
+    lessons: 21,
+    rate: 4.3,
+  },
+  {
+    id: 5,
+    image: require('../assets/Images/math.png'),
+    courseName: 'Mathematical Fundamental',
+    hours: 67,
+    mins: 22,
+    lessons: 129,
+    rate: 4.7,
+  },
+  {
+    id: 6,
+    image: require('../assets/Images/science.png'),
+    courseName: 'Science Fundamental',
+    hours: 5,
+    mins: 34,
+    lessons: 30,
+    rate: 4.2,
+  },
+];
+
 export {
   fields,
   computerScienceCourses,
@@ -269,4 +326,5 @@ export {
   scienceCourses,
   recommendedCourses,
   ongoingCourses,
+  myCourses,
 };

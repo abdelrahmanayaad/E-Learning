@@ -1,12 +1,20 @@
 import React from 'react';
-import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {RFValue} from 'react-native-responsive-fontsize';
 import ReusableStyles from '../styles/ReusableStyles';
 import {boldFontFamily, COLORS, FONTS, PADDINGS} from '../utils/Constants';
 import IconView from './IconView';
 
 function Header(props) {
-  const {title, left, right, iconStyle, iconViewColor, leftOnPress} = props;
+  const {
+    title,
+    left,
+    right,
+    iconStyle,
+    iconViewColor,
+    leftOnPress,
+    profileImage,
+  } = props;
   return (
     <View style={styles.container}>
       {left && (
@@ -17,6 +25,14 @@ function Header(props) {
             iconViewStyle={iconViewColor}
           />
         </TouchableOpacity>
+      )}
+      {profileImage && (
+        <View style={styles.imageWrapper}>
+          <Image
+            style={styles.image}
+            source={require('../assets/Images/instractor2.png')}
+          />
+        </View>
       )}
       <Text
         style={[styles.headerTitle, {marginRight: right ? null : RFValue(30)}]}>
@@ -47,6 +63,15 @@ const styles = StyleSheet.create({
   },
   icon: {
     color: COLORS.mainColor300,
+  },
+  imageWrapper: {
+    backgroundColor: COLORS.gray200,
+    borderRadius: RFValue(10),
+  },
+  image: {
+    width: RFValue(40),
+    height: RFValue(40),
+    borderRadius: RFValue(10),
   },
 });
 

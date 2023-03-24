@@ -146,7 +146,7 @@ const styles = StyleSheet.create({
   },
   starIconStyle: {
     fontSize: FONTS.F14,
-    color: '#F7E532',
+    color: COLORS.yellow100,
   },
   rateView: {
     flexDirection: 'row',

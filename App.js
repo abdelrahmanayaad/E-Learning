@@ -14,13 +14,16 @@ import LoginWithGoogle from './src/components/LoginWithGoogle';
 import AppContainer from './src/navigation/AppContainer';
 import ActivityScreen from './src/screens/ActivityScreen/ActivityScreen';
 import ActivityCourse from './src/components/ActivityCourse';
+import MyCourse from './src/components/MyCourse';
+import MyCourses from './src/screens/MyCourses/MyCourses';
 
 function App() {
   return (
     <Fragment>
       <StatusBar backgroundColor={COLORS.mainColor400} />
       {/* <AppContainer /> */}
-      <ActivityScreen />
+      {/* <ActivityScreen /> */}
+      <MyCourses />
     </Fragment>
   );
 }

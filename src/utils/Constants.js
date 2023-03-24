@@ -19,6 +19,7 @@ const COLORS = {
   bgInput: '#FAF8F8',
   red100: '#f00',
   lightBlue: '#E3ECFD',
+  yellow100: '#F7E532',
 };
 
 const PADDINGS = {
