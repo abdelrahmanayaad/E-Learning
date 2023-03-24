@@ -244,10 +244,29 @@ const recommendedCourses = [
   },
 ];
 
+const ongoingCourses = [
+  {
+    image: require('../assets/Images/reactnative.png'),
+    courseName: 'React Native',
+    ratio: 90,
+  },
+  {
+    image: require('../assets/Images/dataStructure.jpg'),
+    courseName: 'Data Structure',
+    ratio: 40,
+  },
+  {
+    image: require('../assets/Images/math.png'),
+    courseName: 'Mathematical Fundamental',
+    ratio: 60,
+  },
+];
+
 export {
   fields,
   computerScienceCourses,
   engineeringCourses,
   scienceCourses,
   recommendedCourses,
+  ongoingCourses,
 };

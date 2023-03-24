@@ -12,12 +12,15 @@ import DetailsScreen from './src/screens/DetailsScreen/DetailsScreen';
 import Header from './src/components/Header';
 import LoginWithGoogle from './src/components/LoginWithGoogle';
 import AppContainer from './src/navigation/AppContainer';
+import ActivityScreen from './src/screens/ActivityScreen/ActivityScreen';
+import ActivityCourse from './src/components/ActivityCourse';
 
 function App() {
   return (
     <Fragment>
       <StatusBar backgroundColor={COLORS.mainColor400} />
-      <AppContainer />
+      {/* <AppContainer /> */}
+      <ActivityScreen />
     </Fragment>
   );
 }

@@ -98,7 +98,7 @@ const styles = StyleSheet.create({
     textAlign: 'justify',
   },
   button: {
-    height: RFValue(50),
+    height: RFValue(45),
     marginVertical: RFValue(5),
     backgroundColor: COLORS.mainColor400,
   },
