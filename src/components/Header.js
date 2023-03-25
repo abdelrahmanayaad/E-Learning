@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
     flex: 1,
     textAlign: 'center',
     fontFamily: boldFontFamily,
-    fontSize: FONTS.F20,
+    fontSize: FONTS.F18,
     color: COLORS.mainColor300,
   },
   icon: {

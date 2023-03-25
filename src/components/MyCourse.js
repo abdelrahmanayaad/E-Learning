@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
   },
   courseNameTitle: {
     fontFamily: boldFontFamily,
-    fontSize: FONTS.F15,
+    fontSize: FONTS.F14,
     color: COLORS.mainColor300,
   },
   timeView: {

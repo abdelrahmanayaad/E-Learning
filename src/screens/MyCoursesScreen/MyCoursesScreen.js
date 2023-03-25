@@ -3,9 +3,9 @@ import {View, Text, FlatList} from 'react-native';
 import Header from '../../components/Header';
 import MyCourse from '../../components/MyCourse';
 import {myCourses} from '../../utils/Data';
-import styles from './MyCoursesStyles';
+import styles from './MyCoursesScreenStyles';
 
-function MyCourses(props) {
+function MyCoursesScreen(props) {
   const renderMyCoursesHandler = ({item, index}) => {
     return (
       <MyCourse
@@ -32,4 +32,4 @@ function MyCourses(props) {
   );
 }
 
-export default MyCourses;
+export default MyCoursesScreen;

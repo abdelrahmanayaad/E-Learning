@@ -318,6 +318,29 @@ const myCourses = [
     rate: 4.2,
   },
 ];
+const notification = [
+  {
+    image: require('../assets/Images/instractor2.png'),
+    instructor: 'Abdelrahman Ayad',
+    iconName: 'paper-plane',
+    course: 'Mathematical Fundamental',
+    time: '4:16 PM',
+  },
+  {
+    image: require('../assets/Images/intro.png'),
+    instructor: 'Mohamed Eldesoky',
+    iconName: 'checkmark-done-sharp',
+    course: 'C++ Basics',
+    time: '2:02 PM',
+  },
+  {
+    image: require('../assets/Images/instractor2.png'),
+    instructor: 'DR. Waleed',
+    iconName: 'paper-plane',
+    course: 'Data Structure and Algorithms',
+    time: '2:47 PM',
+  },
+];
 
 export {
   fields,
@@ -327,4 +350,5 @@ export {
   recommendedCourses,
   ongoingCourses,
   myCourses,
+  notification,
 };

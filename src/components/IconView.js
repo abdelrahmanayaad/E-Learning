@@ -15,8 +15,8 @@ function IconView(props) {
 
 const styles = StyleSheet.create({
   iconView: {
-    width: RFValue(40),
-    height: RFValue(40),
+    width: RFValue(34),
+    height: RFValue(34),
     borderRadius: RFValue(10),
     backgroundColor: COLORS.lightBlue,
     justifyContent: 'center',

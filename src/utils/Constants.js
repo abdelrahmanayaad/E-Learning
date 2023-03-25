@@ -20,6 +20,7 @@ const COLORS = {
   red100: '#f00',
   lightBlue: '#E3ECFD',
   yellow100: '#F7E532',
+  blue100: '#0095F0',
 };
 
 const PADDINGS = {

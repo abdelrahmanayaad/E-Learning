@@ -15,7 +15,8 @@ import AppContainer from './src/navigation/AppContainer';
 import ActivityScreen from './src/screens/ActivityScreen/ActivityScreen';
 import ActivityCourse from './src/components/ActivityCourse';
 import MyCourse from './src/components/MyCourse';
-import MyCourses from './src/screens/MyCourses/MyCourses';
+import MyCoursesScreen from './src/screens/MyCoursesScreen/MyCoursesScreen';
+import NotificationScreen from './src/screens/NotificationScreen/NotificationScreen';
 
 function App() {
   return (
@@ -23,7 +24,8 @@ function App() {
       <StatusBar backgroundColor={COLORS.mainColor400} />
       {/* <AppContainer /> */}
       {/* <ActivityScreen /> */}
-      <MyCourses />
+      {/* <MyCoursesScreen /> */}
+      <NotificationScreen />
     </Fragment>
   );
 }
