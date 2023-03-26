@@ -17,6 +17,7 @@ import ActivityCourse from './src/components/ActivityCourse';
 import MyCourse from './src/components/MyCourse';
 import MyCoursesScreen from './src/screens/MyCoursesScreen/MyCoursesScreen';
 import NotificationScreen from './src/screens/NotificationScreen/NotificationScreen';
+import ProfileScreen from './src/screens/ProfileScreen/ProfileScreen';
 
 function App() {
   return (
@@ -25,7 +26,8 @@ function App() {
       {/* <AppContainer /> */}
       {/* <ActivityScreen /> */}
       {/* <MyCoursesScreen /> */}
-      <NotificationScreen />
+      {/* <NotificationScreen /> */}
+      <ProfileScreen />
     </Fragment>
   );
 }

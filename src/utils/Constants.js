@@ -36,6 +36,7 @@ const MARGINS = {
   M20: RFValue(20),
   M22: RFValue(22),
   M25: RFValue(25),
+  M30: RFValue(30),
 };
 
 const FONTS = {
