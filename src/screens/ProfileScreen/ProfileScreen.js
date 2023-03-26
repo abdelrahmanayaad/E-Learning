@@ -34,8 +34,9 @@ function ProfileScreen() {
       </View>
       <View style={styles.profileImageViewStyle}>
         <ImageBackground
+          resizeMode="contain"
           borderRadius={RFValue(60)}
-          source={require('../../assets/Images/instractor2.png')}
+          source={require('../../assets/Images/Profile.jpg')}
           style={styles.profileImageStyle}>
           <TouchableOpacity style={styles.penView}>
             <FontAwesome5 name="pen" style={styles.penIcon} />
@@ -44,9 +45,9 @@ function ProfileScreen() {
       </View>
       <View style={styles.nameView}>
         <Text style={[ReusableStyles.textTitle, styles.name]}>
-          Robert Smith
+          Abdelrahman Ayad
         </Text>
-        <Text style={styles.email}>robertsmith74@gmail.com</Text>
+        <Text style={styles.email}>abdelrahmanayad74@gmail.com</Text>
       </View>
       {list('person-outline', 'User Details', true)}
       {list('school-outline', 'Certificate', true)}
