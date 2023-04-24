@@ -1,5 +1,5 @@
 import React from 'react';
-import {Image, StyleSheet, Text, View} from 'react-native';
+import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {RFValue} from 'react-native-responsive-fontsize';
 import {
   COLORS,
@@ -8,11 +8,13 @@ import {
   MARGINS,
   PADDINGS,
 } from '../utils/Constants';
+import {useNavigation} from '@react-navigation/native';
 
 function ActivityCourse(props) {
   const {image, courseName, ratio} = props;
+  const navigation = useNavigation();
   return (
-    <View style={styles.container}>
+    <TouchableOpacity style={styles.container}>
       <Image source={image} style={styles.image} />
       <View style={styles.sectionTwoWrapper}>
         <View style={styles.courseNameView}>
@@ -23,7 +25,7 @@ function ActivityCourse(props) {
           <View style={[styles.activity, {width: `${ratio}%`}]} />
         </View>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 }
 

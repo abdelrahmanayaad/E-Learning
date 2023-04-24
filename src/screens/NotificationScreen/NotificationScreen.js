@@ -5,7 +5,7 @@ import Notification from '../../components/Notification';
 import {notification} from '../../utils/Data';
 import styles from './NotificationScreenStyles';
 
-function NotificationScreen() {
+function NotificationScreen({navigation}) {
   const renderNotificationsHandler = ({item, index}) => {
     return (
       <Notification
@@ -20,7 +20,11 @@ function NotificationScreen() {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Header title="Notifications" left />
+        <Header
+          title="Notifications"
+          left
+          leftOnPress={() => navigation.goBack()}
+        />
       </View>
       <View style={styles.todayTitleView}>
         <Text style={styles.day}>Today</Text>

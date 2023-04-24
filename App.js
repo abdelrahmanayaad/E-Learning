@@ -23,11 +23,7 @@ function App() {
   return (
     <Fragment>
       <StatusBar backgroundColor={COLORS.mainColor400} />
-      {/* <AppContainer /> */}
-      {/* <ActivityScreen /> */}
-      {/* <MyCoursesScreen /> */}
-      {/* <NotificationScreen /> */}
-      <ProfileScreen />
+      <AppContainer />
     </Fragment>
   );
 }

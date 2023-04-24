@@ -1,10 +1,11 @@
 import {NavigationContainer} from '@react-navigation/native';
 import HomeStack from './HomeStack';
+import HomeTabs from './HomeTabs';
 
 function AppContainer() {
   return (
     <NavigationContainer>
-      <HomeStack />
+      <HomeTabs />
     </NavigationContainer>
   );
 }

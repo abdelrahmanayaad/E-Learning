@@ -81,20 +81,23 @@ function HomeScreen(props) {
     <View style={styles.container}>
       <View style={styles.header}>
         <View style={styles.headerSection1}>
-          <View style={styles.imageProfileView}>
+          <TouchableOpacity
+            onPress={() => navigation.navigate('ProfileScreen')}
+            style={styles.imageProfileView}>
             <Image
               style={styles.imageProfile}
               source={require('../../assets/Images/intro.png')}
             />
-          </View>
+          </TouchableOpacity>
           <View style={styles.nameView}>
             <Text style={ReusableStyles.contentTextBold}>Hi, Abdelrahman</Text>
             <Text style={styles.letsLearn}>Let's start learning !</Text>
           </View>
         </View>
-        <View>
+        <TouchableOpacity
+          onPress={() => navigation.navigate('NotificationScreen')}>
           <IconView name="notifications-outline" />
-        </View>
+        </TouchableOpacity>
       </View>
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.titleView}>
