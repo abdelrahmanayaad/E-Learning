@@ -11,7 +11,7 @@ import {COLORS} from '../../utils/Constants';
 import {useForm, Controller} from 'react-hook-form';
 import LoginWithGoogle from '../../components/LoginWithGoogle';
 
-function LoginScreen() {
+function LoginScreen({navigation}) {
   const [toggleCheckBox, setToggleCheckBox] = useState(false);
   const [focus, setFocus] = useState({
     email: false,
@@ -168,7 +168,12 @@ function LoginScreen() {
         />
         <Text style={styles.haveAccountTextStyle}>
           Don't have an account?
-          <Text style={styles.signUpText}> Sign up now.</Text>
+          <Text
+            onPress={() => navigation.navigate('SignupScreen')}
+            style={styles.signUpText}>
+            {' '}
+            Sign up now.
+          </Text>
         </Text>
       </ScrollView>
     </View>

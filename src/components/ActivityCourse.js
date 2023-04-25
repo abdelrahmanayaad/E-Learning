@@ -11,10 +11,12 @@ import {
 import {useNavigation} from '@react-navigation/native';
 
 function ActivityCourse(props) {
-  const {image, courseName, ratio} = props;
+  const {image, courseName, ratio, item} = props;
   const navigation = useNavigation();
   return (
-    <TouchableOpacity style={styles.container}>
+    <TouchableOpacity
+      onPress={() => navigation.navigate('DetailsScreen', {data: item})}
+      style={styles.container}>
       <Image source={image} style={styles.image} />
       <View style={styles.sectionTwoWrapper}>
         <View style={styles.courseNameView}>

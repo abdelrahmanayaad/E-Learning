@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
     marginRight: MARGINS.M10,
   },
   rightIconViewStyle: {
-    backgroundColor: COLORS.gray500,
+    backgroundColor: COLORS.gray200,
   },
   listName: {
     fontFamily: defaultFontFamily,

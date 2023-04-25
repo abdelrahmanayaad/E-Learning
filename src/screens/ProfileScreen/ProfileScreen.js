@@ -30,13 +30,13 @@ function ProfileScreen() {
   return (
     <View style={styles.container}>
       <View style={styles.headerView}>
-        <Header title="Profile" left right="settings-outline" />
+        <Header title="Profile" right="settings-outline" />
       </View>
       <View style={styles.profileImageViewStyle}>
         <ImageBackground
           resizeMode="contain"
           borderRadius={RFValue(60)}
-          source={require('../../assets/Images/Profile.jpg')}
+          source={require('../../assets/Images/intro.png')}
           style={styles.profileImageStyle}>
           <TouchableOpacity style={styles.penView}>
             <FontAwesome5 name="pen" style={styles.penIcon} />

@@ -26,6 +26,7 @@ const styles = StyleSheet.create({
   titleView: {
     marginTop: MARGINS.M10,
     paddingRight: PADDINGS.P10,
+    marginBottom: RFValue(-10),
   },
   headerSection1: {
     flexDirection: 'row',

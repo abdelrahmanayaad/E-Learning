@@ -9,7 +9,7 @@ import ReusableStyles from '../../styles/ReusableStyles';
 import {COLORS} from '../../utils/Constants';
 import styles from './SignupScreenStyle';
 
-function SignupScreen() {
+function SignupScreen({navigation}) {
   const [focus, setFocus] = useState({
     name: false,
     email: false,
@@ -197,7 +197,12 @@ function SignupScreen() {
         />
         <Text style={styles.haveAccountTextStyle}>
           Already have an account?
-          <Text style={styles.signInText}> Sign in.</Text>
+          <Text
+            onPress={() => navigation.navigate('LoginScreen')}
+            style={styles.signInText}>
+            {' '}
+            Sign in.
+          </Text>
         </Text>
       </ScrollView>
     </View>

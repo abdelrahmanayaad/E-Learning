@@ -1,11 +1,14 @@
 import {NavigationContainer} from '@react-navigation/native';
-import HomeStack from './HomeStack';
 import HomeTabs from './HomeTabs';
+import AuthStack from './AuthStack';
+import {useEffect} from 'react';
+import SplashScreen from '../screens/SplashScreen/SplashScreen';
 
-function AppContainer() {
+function AppContainer({isAuth}) {
+  useEffect(() => {}, []);
   return (
     <NavigationContainer>
-      <HomeTabs />
+      {isAuth ? <HomeTabs /> : <AuthStack />}
     </NavigationContainer>
   );
 }

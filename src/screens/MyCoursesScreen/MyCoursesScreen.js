@@ -5,7 +5,7 @@ import MyCourse from '../../components/MyCourse';
 import {myCourses} from '../../utils/Data';
 import styles from './MyCoursesScreenStyles';
 
-function MyCoursesScreen(props) {
+function MyCoursesScreen({navigation}) {
   const renderMyCoursesHandler = ({item, index}) => {
     return (
       <MyCourse
@@ -21,7 +21,12 @@ function MyCoursesScreen(props) {
   return (
     <View style={styles.container}>
       <View style={styles.headerView}>
-        <Header title="My Courses" right="notifications-outline" profileImage />
+        <Header
+          title="My Courses"
+          right="notifications-outline"
+          profileImage
+          rightOnPress={() => navigation.navigate('NotificationScreen')}
+        />
       </View>
       <FlatList
         showsVerticalScrollIndicator={false}

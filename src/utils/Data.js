@@ -25,6 +25,7 @@ const fields = [
 const computerScienceCourses = [
   {
     id: 1,
+    ratio: 0,
     backgroundImage: require('../assets/Images/computer.png'),
     profileImage: require('../assets/Images/instractor2.png'),
     name: 'Moustafa Saad',
@@ -53,6 +54,7 @@ const computerScienceCourses = [
   },
   {
     id: 2,
+    ratio: 40,
     backgroundImage: require('../assets/Images/dataStructure.jpg'),
     profileImage: require('../assets/Images/intro.png'),
     name: 'Mohamed Eldesoky',
@@ -85,10 +87,12 @@ const computerScienceCourses = [
   },
   {
     id: 3,
+    ratio: 90,
     backgroundImage: require('../assets/Images/reactnative.png'),
     profileImage: require('../assets/Images/intro.png'),
     name: 'Maximilian',
     courseName: 'React Native',
+    ratio: 90,
     hours: 42,
     mins: 33,
     lectures: 230,
@@ -184,6 +188,7 @@ const scienceCourses = [
 const recommendedCourses = [
   {
     id: 1,
+    ratio: 60,
     backgroundImage: require('../assets/Images/math.png'),
     profileImage: require('../assets/Images/intro.png'),
     name: 'DR. Waleed',

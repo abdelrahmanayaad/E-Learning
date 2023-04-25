@@ -13,7 +13,7 @@ import {
 } from 'victory-native';
 import ReusableStyles from '../../styles/ReusableStyles';
 import ActivityCourse from '../../components/ActivityCourse';
-import {ongoingCourses} from '../../utils/Data';
+import {computerScienceCourses, ongoingCourses} from '../../utils/Data';
 
 const data = [
   {day: 'Sun', hours: 1},
@@ -27,17 +27,18 @@ const data = [
 const ongoingCoursesHandler = ({item, index}) => {
   return (
     <ActivityCourse
+      item={item}
       ratio={item.ratio}
       courseName={item.courseName}
-      image={item.image}
+      image={item.backgroundImage}
     />
   );
 };
-function ActivityScreen() {
+function ActivityScreen({navigation}) {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Header title="Activity" left right="settings-outline" />
+        <Header title="Activity" right="settings-outline" />
       </View>
       <ScrollView
         showsVerticalScrollIndicator={false}
@@ -77,7 +78,10 @@ function ActivityScreen() {
           <Text style={ReusableStyles.textTitle}>Ongoing Course</Text>
           <Text style={styles.seeAll}>See All</Text>
         </View>
-        <FlatList data={ongoingCourses} renderItem={ongoingCoursesHandler} />
+        <FlatList
+          data={computerScienceCourses}
+          renderItem={ongoingCoursesHandler}
+        />
       </ScrollView>
     </View>
   );

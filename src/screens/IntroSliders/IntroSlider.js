@@ -4,7 +4,7 @@ import styles from './IntroSliderStyles';
 import Icon from 'react-native-vector-icons/AntDesign';
 import * as Animatable from 'react-native-animatable';
 
-function IntroSlider() {
+function IntroSlider({navigation}) {
   return (
     <ImageBackground
       source={require('../../assets/Images/intro.png')}
@@ -18,7 +18,9 @@ function IntroSlider() {
           Discover the things you want to learn and grow with them.
         </Text>
         <Animatable.View animation={'bounceInLeft'} duration={3000}>
-          <TouchableOpacity style={styles.button}>
+          <TouchableOpacity
+            onPress={() => navigation.navigate('SignupScreen')}
+            style={styles.button}>
             <Icon name="arrowright" style={styles.icon} />
           </TouchableOpacity>
         </Animatable.View>

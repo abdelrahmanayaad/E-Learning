@@ -14,6 +14,7 @@ function Header(props) {
     iconViewColor,
     leftOnPress,
     profileImage,
+    rightOnPress,
   } = props;
   return (
     <View style={styles.container}>
@@ -35,15 +36,21 @@ function Header(props) {
         </View>
       )}
       <Text
-        style={[styles.headerTitle, {marginRight: right ? null : RFValue(30)}]}>
+        style={[
+          styles.headerTitle,
+          {marginRight: right ? null : RFValue(30)},
+          {marginLeft: left ? null : RFValue(30)},
+        ]}>
         {title}
       </Text>
       {right && (
-        <IconView
-          name={right}
-          iconStyle={[styles.icon, iconStyle]}
-          iconViewStyle={iconViewColor}
-        />
+        <TouchableOpacity onPress={rightOnPress}>
+          <IconView
+            name={right}
+            iconStyle={[styles.icon, iconStyle]}
+            iconViewStyle={iconViewColor}
+          />
+        </TouchableOpacity>
       )}
     </View>
   );
